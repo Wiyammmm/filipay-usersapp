@@ -31,12 +31,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.3.1
   google_fonts: ^5.1.0
   permission_handler: ^10.4.3
   qr_code_scanner: ^1.0.1
   url_launcher: ^6.1.12
- 
 
 flutter_native_splash:
   android: true
@@ -49,6 +49,12 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/Filipay-logo.png"
+  adaptive_icon_background: "#ffffff"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

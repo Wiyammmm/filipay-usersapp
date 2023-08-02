@@ -274,7 +274,7 @@ class _HomePageState extends State<HomePage> {
           Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 0.5,
                 height: MediaQuery.of(context).size.height * 0.1,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -285,7 +285,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 child: AspectRatio(
-                  aspectRatio: 1,
+                  aspectRatio: 0.1,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: ClipOval(
@@ -298,7 +298,8 @@ class _HomePageState extends State<HomePage> {
                           );
                         },
                         child: Image.asset(
-                          'assets/qr-code.png', // Replace with your image path
+                          'assets/qr-code.png',
+                          width: 10, // Replace with your image path
                           fit: BoxFit.contain,
                         ),
                       ),

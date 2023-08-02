@@ -221,10 +221,15 @@ class _QrCodeScannerState extends State<QrCodeScanner> {
   }
 
   void _openLink() async {
-    if (await canLaunch(resultqr)) {
-      await launch(resultqr);
+    final Uri uri = Uri.parse(resultqr);
+
+    String? snValue = uri.queryParameters['sn'];
+    if (snValue != null) {
+      print('sn value: $snValue');
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+      // Now you have the "sn" value, you can use it as needed.
     } else {
-      print('Could not launch $result');
+      print('Could not extract "sn" value from the URL');
     }
   }
 
